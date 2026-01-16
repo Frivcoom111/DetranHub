@@ -1,0 +1,27 @@
+/* Estilos para o formulário de adicionar/editar despesas */
+
+/* Uses variables from css/theme.css */
+body{ background: var(--bg); color: var(--text); }
+
+.form-control, .form-select, .form-control:focus, .form-select:focus{
+    border: 1px solid rgba(31,41,55,0.09);
+    box-shadow: none;
+}
+
+.form-label{ color: var(--text); font-weight:600; }
+
+.card-form{
+    background:var(--surface);
+    border-radius:.6rem;
+    padding:1rem;
+    box-shadow: 0 6px 18px rgba(31,41,55,0.04);
+}
+
+.btn-primary{ background: var(--primary); border-color: var(--primary); }
+
+@media (max-width:576px){
+    .card-form{ padding:.75rem }
+}
+
+/* pequenos ajustes visuais */
+.alert{ border-radius:.5rem }

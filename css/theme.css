@@ -1,0 +1,120 @@
+
+/* Theme Inverted - fundo escuro com superfícies menos claras e cores de destaque adaptadas */
+:root{
+    /* Background & surfaces - lighter / off-white theme */
+    --bg: #f5f7fb;           /* página levemente off-white */
+    --surface: #ffffff;      /* cards / superfícies */
+    --surface-2: #fbfdff;    /* superfície secundária muito suave */
+    --muted-bg: rgba(15,23,36,0.03);
+
+    /* Textos */
+    --text: #0f1724;         /* texto principal escuro */
+    --muted: #6b7280;        /* texto secundário */
+
+    /* Paleta azul (mais profunda, para destaque) */
+    --blue-50:  #eaf2ff;
+    --blue-100: #d3e6ff;
+    --blue-200: #a6ceff;
+    --blue-300: #7fb6ff;
+    --blue-400: #4d94ff;
+    --primary:  #1e40af;     /* azul profundo */
+    --primary-700: #17307a;
+
+    /* Semântica */
+    --success: #16a34a;
+    --danger:  #dc2626;
+    --warning: #f59e0b;
+    --accent:  #7c3aed;
+
+    /* Shadows / layout */
+    --shadow-xs: 0 2px 6px rgba(15,23,36,0.04);
+    --shadow-sm: 0 8px 20px rgba(15,23,36,0.06);
+    --shadow-md: 0 16px 48px rgba(15,23,36,0.08);
+
+    /* Spacing / radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+
+    /* Motion */
+    --ease: cubic-bezier(.2,.9,.3,1);
+}
+
+/* Base typography and smoothing */
+
+html,body{
+    height:100%;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--bg);
+}
+
+/* Typography */
+h1,h2,h3,h4,h5,h6{ color:var(--text); margin:0 0 .5rem; font-weight:700; }
+h1{ font-size:1.6rem; }
+h2{ font-size:1.25rem; }
+h3{ font-size:1.05rem; }
+
+.muted{ color:var(--muted); }
+.small-muted{ font-size:0.85rem; color:var(--muted); }
+
+/* Card title / meta */
+.card-title{ font-size:1.05rem; font-weight:700; color:var(--text); }
+.card-sub{ font-size:0.9rem; color:var(--muted); }
+
+/* Tables */
+.table thead th{ background: var(--surface-2); color:var(--text); border-bottom: 1px solid rgba(15,23,36,0.06); }
+.table tbody tr td{ vertical-align:middle; }
+
+/* Small UI helpers */
+.surface-quiet{ background:var(--surface-2); border-radius: var(--radius-sm); padding: .5rem; }
+
+
+/* Card helper */
+.card-surface{
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    color: var(--text);
+    border: 1px solid rgba(15,23,36,0.04);
+}
+
+/* Buttons design tokens */
+.btn-primary{
+    background: linear-gradient(180deg, var(--blue-300), var(--primary));
+    color: #fff;
+    border: 0;
+    box-shadow: 0 6px 18px rgba(30,58,138,0.08);
+}
+.btn-primary:hover{ filter: brightness(.98); }
+
+.btn-ghost{
+    background: transparent; border: 1px solid rgba(255,255,255,0.04); color:var(--text);
+}
+
+/* Semantic helpers */
+.text-muted{ color: var(--muted) !important; }
+.text-accent{ color: var(--accent); }
+.bg-muted{ background: var(--muted-bg); }
+
+/* Small utilities */
+.pill{ display:inline-flex; align-items:center; gap:.5rem; padding:.25rem .6rem; border-radius:999px; background:var(--primary); color:#fff; font-weight:600; }
+
+.kpi-value{ font-size:1.3rem; font-weight:700; color:var(--text); }
+.kpi-sub{ font-size:.9rem; color:var(--muted); }
+
+/* Focus ring for accessibility */
+.focus-ring:focus{ outline: 3px solid rgba(11,94,215,0.14); outline-offset: 2px; }
+
+/* Gradient utilities */
+.grad-primary{ background: linear-gradient(90deg, var(--blue-300), var(--primary)); }
+
+/* Layout tweaks for tables/cards */
+.muted-border{ border: 1px solid rgba(255,255,255,0.03); }
+
+/* Responsive helpers */
+@media (max-width: 576px){
+    .card-surface{ border-radius: 8px; }
+}
+

@@ -1,0 +1,144 @@
+:root {
+    --processo-gap: 1rem;
+}
+
+.processo-card {
+    border-radius: var(--radius-md, 0.75rem);
+    border: 1px solid rgba(15, 23, 36, 0.08);
+}
+
+.processo-section {
+    margin-bottom: calc(var(--processo-gap) * 1.5);
+}
+
+.processo-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.processo-form .form-label {
+    font-weight: 600;
+    color: var(--text-muted, #334155);
+}
+
+.processo-form .row {
+    row-gap: 1rem;
+}
+
+.processo-form .form-control,
+.processo-form .form-select {
+    border-radius: var(--radius-sm, 0.5rem);
+}
+
+.processo-form .btn-primary {
+    min-height: 3rem;
+    font-weight: 600;
+}
+
+.processo-status-form select {
+    min-width: 150px;
+}
+
+.processo-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.processo-edit-btn {
+    font-weight: 600;
+    color: var(--primary, #0d6efd);
+    text-decoration: none;
+}
+
+.processo-edit-btn:hover,
+.processo-edit-btn:focus {
+    text-decoration: underline;
+}
+
+.processo-table__table {
+    min-width: 760px;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 992px) {
+    .processo-status-form select {
+        min-width: 120px;
+    }
+
+    .processo-form .row {
+        row-gap: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .processo-table {
+        overflow: visible;
+    }
+
+    .processo-table__table {
+        min-width: 100%;
+        border: 0;
+    }
+
+    .processo-table__table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .processo-table__table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(15, 23, 36, 0.08);
+        border-radius: 0.75rem;
+        box-shadow: 0 8px 24px rgba(15, 23, 36, 0.08);
+    }
+
+    .processo-table__table tbody td {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        text-align: left;
+        padding: 0.65rem 1rem;
+        border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+    }
+
+    .processo-table__table tbody td:last-child {
+        border-bottom: 0;
+    }
+
+    .processo-table__table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #475569;
+    }
+
+    .processo-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .processo-status-form {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .processo-status-form select,
+    .processo-status-form button {
+        width: 100%;
+    }
+}
