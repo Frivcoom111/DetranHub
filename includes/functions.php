@@ -50,7 +50,7 @@ function buscarCredenciamentoPorUF(string $uf): ?array {
 
 /**
  * Atualiza datas de renovação e vencimento de uma UF
- * Retorna true em sucesso, false em erro
+ * Retorna true em sucesso
  */
 function atualizarCredenciamentoUF(string $uf, string $renovacao, string $vencimento): bool {
     global $conn;
